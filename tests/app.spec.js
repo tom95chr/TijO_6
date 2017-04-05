@@ -1,10 +1,21 @@
 var expect = require('chai').expect;
 var app = require('../app/app');
-it('when parameters is not a number ', function(){
-    expect(app.findMax([1,2,3,4,'a'])).to.eql(false);
-});
 
+describe('find maximum of array', function ()
+{
+    describe('when parameters are correct ', function ()
+    {
+        it('should return max value', function ()
+        {
+            expect(app.findMax([1, 2, 3, 4, -5 ])).to.eql(4);
+        });
+    });
+    describe('when parameters are wrong', function ()
+    {
+        it('should return false', function ()
+        {
+            expect(app.findMax([6, 3, 'a'])).to.eql(false);
+        });
+    });
 
-it('should find max element of array', function (){
-    expect(app.findMax(array)).to.eql({min: 10});
 });
