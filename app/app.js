@@ -1,3 +1,4 @@
+
 function findMin(array)
 {
 
