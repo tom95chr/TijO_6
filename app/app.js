@@ -1,19 +1,19 @@
-
-function findMin(array)
-{
-var min = array[0];
-for(i=0;i<array.length;i++){
-    if(typeof(array[i]!="number")){
+function findMin(array) {
+    if(array.length === 0) {
         return false;
     }
-}
-for (i=0;i<array.length[0];i++){
-    if(min<array[i]){
-        min = array[i]
+    var minimum = array[0];
+    for(var i = 0; i < array.length; i++) {
+        if (isNaN(array[i])) {
+            return false;
+        }
+        if(minimum > array[i]) {
+            minimum = array[i];
+        }
     }
+    return minimum;
 }
 
-}
 module.exports = {
     findMin: findMin
 };

@@ -3,7 +3,7 @@ var app = require('../app/app');
 
 it('should find max element of array', function()
 {
-    expect(app.findMin([5,2,3,4,1,9,8,7,6])).to.eql({min: 1});
+    expect(app.findMin([5,2,3,4,1,9,8,7,6])).to.eql(1);
 });
 
 it('should return false if any of elements is not a number', function()
